@@ -6,6 +6,7 @@
     padding: 50px 5%;
     background: linear-gradient(to right, #f8f9ff, #eef1ff);
     gap: 50px;
+    /* font-size: 60px; */
 }
 
 /* 🔵 Ajustes de tamaño */
@@ -38,6 +39,53 @@ p {
     border-radius: 10px;
 }
 
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.primaryButton{
+    width: 190px;
+    height: 60px;
+    margin: 10px;
+    background: linear-gradient(90deg, #2862eb, #5e4aea, #9034ea);
+    color: white;
+    border: none;
+    font-size: 17px;
+    border-radius: 10px;
+
+}
+
+.secondaryButton{
+    width: 160px;
+    height: 60px;
+    margin: 10px;
+    background-color: transparent;
+    border: 2px solid #2862eb;
+    color: #2862eb;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.primaryButton, .secondaryButton {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primaryButton:hover, .secondaryButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.278);
+}
+
+.primaryButton:active, .secondaryButton:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+
+
 /* 🔴 Ajustes Responsivos */
 @media (max-width: 1024px) {
     .hero {
@@ -66,6 +114,10 @@ p {
         height: auto;
         padding: 30px 5%;
         margin-top: 50px;
+    }
+
+    .buttons {
+        justify-content: center; /* Centra los botones en móviles */
     }
 
     .content {
