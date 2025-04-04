@@ -1,12 +1,15 @@
+/* 🔵 Ajustes generales */
 .hero {
     display: flex;
-    height: 80vh;
+    min-height: 80vh;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 5%;
+    padding: 120px 5% 50px; /* 🔹 Solo agregamos espacio arriba */
     background: linear-gradient(to right, #f8f9ff, #eef1ff);
     gap: 50px;
+    padding-top: 100px; /* Para que el contenido no se suba y tape el navbar */
 }
+
 
 /* 🔵 Ajustes de tamaño */
 .content {
@@ -38,25 +41,79 @@ p {
     border-radius: 10px;
 }
 
-/* 🔴 Responsive */
+/* 🔴 Ajustes Responsivos */
+@media (max-width: 1024px) {
+    .hero {
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .image img {
+        width: 500px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
         gap: 30px;
+        min-height: auto;
     }
 
     .content {
         max-width: 100%;
     }
 
-    .buttons {
-        flex-direction: column;
-        align-items: center;
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 
     .image img {
         width: 100%;
         max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        margin-top: 60px; /* 🔹 Ajuste para pantallas más pequeñas */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .image img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .NavBar {
+        position: fixed; /* Se asegura de que siga fijo */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .hero {
+        padding-top: 110px; /* Un poco más de espacio en móviles */
     }
 }

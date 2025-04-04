@@ -81,22 +81,37 @@ h3 {
 
 @media (max-width: 1024px) {
     .cardsContainer {
-        gap: 50px;
+        gap: 40px;
         padding: 15px;
     }
 }
 
 @media (max-width: 768px) {
     .cardsContainer {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
-        gap: 20px; /* Menos espacio entre tarjetas */
+        flex-direction: column; /* Apila las tarjetas en una sola columna */
+        align-items: center; /* Centra las tarjetas */
+        /* Reduce el espacio entre ellas */
+    }
+
+    .cardServices {
+        width: 90%; /* Asegura que ocupen casi toda la pantalla */
+        max-width: 400px; /* Evita que se estiren demasiado */
+        max-height: 150px;
     }
 }
 
-@media (max-width: 1368px) {
-    .cardsContainer {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Permite que se ajusten */
-        gap: 40px; /* Reduce el espacio entre tarjetas */
+@media (max-width: 480px) {
+    .cardServices {
+        width: 80%; /* Ocupar todo el ancho disponible en móviles */
+        padding: 20px; /* Ajuste del padding para evitar mucho espacio */
+    }
+
+    h3 {
+        font-size: 1.3rem; /* Reduce el tamaño del título en móviles */
+    }
+
+    .cardServices span {
+        font-size: 0.9rem; /* Ajuste en texto para mejor legibilidad */
     }
 }
 

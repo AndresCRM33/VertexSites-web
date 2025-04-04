@@ -1,0 +1,381 @@
+/* Contenedor principal */
+.container {
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Título principal */
+.containerTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerTitle h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.barraTitulo {
+    width: 80px;
+    height: 5px;
+    background-color: #2562eb;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de las tarjetas */
+.cardsPricingContainer {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* <- Corregido */
+    gap: 20px;
+    width: 80%;
+}
+
+/* Tarjetas individuales */
+.cardContainer {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 10px;
+    width: 320px;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.cardContainer:hover {
+    border-color: #2562eb;
+}
+
+/* Plan más popular */
+.cardContainer.popular {
+    border-color: #2562eb;
+    position: relative;
+    transform: scale(1.08); /* Aumenta ligeramente su tamaño */
+    min-height: 540px; /* Le da más altura para destacarla */
+    transition: all 0.3s ease;
+}
+
+.cardContainer.popular:hover {
+    background-color: #467ae90c;
+}
+
+.cardContainer.popular::before {
+    content: "Popular";
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    background: #2562eb;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Título de la tarjeta */
+.cardContainer h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Precio */
+.pricing {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Descripción */
+.description {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+/* Lista de características */
+.featureList {
+    list-style: none;
+    padding: 0;
+}
+
+.featureList li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin: 8px 0;
+}
+
+.featureList li::before {
+    content: "✔";
+    color: #2562eb;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Botón */
+.cardContainer button {
+    background: #2562eb;
+    color: white;
+    border: none;
+    width: 90%;
+    height: 50px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.cardContainer button:hover {
+    background: #1a4bb8;
+}
+
+/* Responsivo */
+/* Contenedor principal */
+.container {
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Título principal */
+.containerTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerTitle h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.barraTitulo {
+    width: 80px;
+    height: 5px;
+    background-color: #2562eb;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de las tarjetas */
+.cardsPricingContainer {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* <- Corregido */
+    gap: 20px;
+    width: 80%;
+}
+
+/* Tarjetas individuales */
+.cardContainer {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 10px;
+    width: 320px;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.cardContainer:hover {
+    border-color: #2562eb;
+}
+
+/* Plan más popular */
+.cardContainer.popular {
+    border-color: #2562eb;
+    position: relative;
+    transform: scale(1.08); /* Aumenta ligeramente su tamaño */
+    min-height: 540px; /* Le da más altura para destacarla */
+    transition: all 0.3s ease;
+}
+
+.cardContainer.popular:hover {
+    background-color: #467ae90c;
+}
+
+.cardContainer.popular::before {
+    content: "Popular";
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    background: #2562eb;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Título de la tarjeta */
+.cardContainer h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Precio */
+.pricing {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Descripción */
+.description {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+/* Lista de características */
+.featureList {
+    list-style: none;
+    padding: 0;
+}
+
+.featureList li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin: 8px 0;
+}
+
+.featureList li::before {
+    content: "✔";
+    color: #2562eb;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Botón */
+.cardContainer button {
+    background: #2562eb;
+    color: white;
+    border: none;
+    width: 90%;
+    height: 50px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.cardContainer button:hover {
+    background: #1a4bb8;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .cardsPricingContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+        height: auto;
+    }
+
+    .containerTitle h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .cardsPricingContainer {
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .cardContainer {
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .cardContainer h3 {
+        font-size: 20px;
+    }
+
+    .pricing {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .featureList li {
+        font-size: 13px;
+    }
+
+    .cardContainer button {
+        height: 45px;
+        font-size: 13px;
+    }
+
+    .cardContainer.popular {
+        transform: none;
+        min-height: auto;
+    }
+
+    .cardContainer.popular::before {
+        top: -12px;
+        right: 10px;
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .cardsPricingContainer {
+      flex-direction: column;
+      align-items: center;       /* Este ya lo tienes, genial */
+      justify-content: center;   /* Asegúrate de tener esto */
+      width: 100%;               /* Para evitar espacio sobrante */
+      padding: 0 15px;           /* Un poco de margen interno opcional */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cardContainer {
+      width: 90%;
+      max-width: 350px;
+      margin: 0 auto;            /* Este centra la card horizontalmente */
+    }
+  }
+  

@@ -1,0 +1,348 @@
+/* Contenedor General */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    padding: 50px 20px;
+}
+
+/* Título */
+.containerTitle {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.containerTitle h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.barraTitulo {
+    width: 80px;
+    height: 4px;
+    background-color: #2562eb;
+    margin: 8px auto 30px auto;
+    border-radius: 3px;
+}
+
+/* Texto debajo del título */
+.container > span {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+/* Sección de Información */
+.containerInformation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Ambas columnas del mismo ancho */
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: start;
+    justify-content: center;
+}
+
+/* Formulario */
+.containerForm {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Se asegura que no ocupe más espacio del debido */
+}
+
+.containerForm h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.inputContainer {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.inputContainer label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.inputContainer input,
+.inputContainer textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    max-width: 90%; /* Limita el ancho */
+}
+
+.inputContainer textarea {
+    height: 120px;
+    resize: none;
+}
+
+.containerForm button {
+    width: 94%;
+    padding: 12px;
+    background: linear-gradient(135deg, #2562eb, #1e4bb8);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.containerForm button:hover {
+    background-color: #1e4bb8;
+}
+
+/* Lado Derecho (Contact Info y Business Hours) */
+.rightInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px; /* Se asegura que no ocupe más espacio del debido */
+}
+
+/* Tarjeta Contact Information */
+.containerInfo {
+    background: linear-gradient(135deg, #344cd9, #4238ca);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.containerInfo h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white
+}
+
+/* Tarjeta Business Hours */
+.containerBusinessHours {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Estilos de los Items (para Contact Info) */
+.containerItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.containerItem:last-child {
+    margin-bottom: 0;
+}
+
+.iconContainer {
+    background: #3066e9;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Estilos para Contact Info */
+.containerInfo .iconContainer {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para Business Hours */
+.businessItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.businessItem .itemDay {
+    flex: 1;
+    text-align: left;
+    color: #555;
+}
+
+.businessItem .itemHour {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    color: black;
+}
+
+.businessItem:last-child {
+    border-bottom: none;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoItem span {
+    margin: 3px;
+}
+
+.itemTitle {
+    font-weight: bold;
+}
+
+
+/* Ajuste Responsivo */
+/* Ajuste Responsivo */
+@media (max-width: 1188px) {
+    .containerInformation {
+        grid-template-columns: 1fr; /* Se apila en una sola columna */
+        align-items: center; /* Centra los elementos en la columna */
+    }
+
+    .containerForm {
+        max-width: 500px; /* Mantiene el formulario con un ancho controlado */
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .rightInformation {
+        max-width: 500px; /* Limita el ancho de las tarjetas */
+        width: 100%;
+        margin: 0 auto; /* Centra las tarjetas */
+    }
+
+    .containerInfo,
+    .containerBusinessHours {
+        max-width: 500px; /* Asegura que las tarjetas no sean más anchas */
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .containerTitle h2 {
+        font-size: 28px;
+    }
+
+    .barraTitulo {
+        width: 60px;
+        height: 3px;
+    }
+
+    .container > span {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .containerForm, 
+    .rightInformation {
+        max-width: 100%;
+    }
+
+    .containerForm {
+        padding: 30px;
+    }
+
+    .containerInfo, 
+    .containerBusinessHours {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .containerTitle h2 {
+        font-size: 24px;
+    }
+
+    .barraTitulo {
+        width: 50px;
+        height: 3px;
+    }
+
+    .container > span {
+        font-size: 14px;
+    }
+
+    .containerForm {
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;    
+    }
+
+    .containerForm h3 {
+        font-size: 22px;
+    }
+
+    .inputContainer label {
+        font-size: 14px;
+    }
+
+    .inputContainer input, 
+    .inputContainer textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .containerForm button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .containerInfo h3 {
+        font-size: 20px;
+    }
+
+    .businessItem {
+        font-size: 14px;
+    }
+    
+    .containerInfo,
+    .containerBusinessHours {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+}

@@ -4,25 +4,24 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px 5%;
-    height: 70px;
-    background-color: transparent;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo inicial */
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Cambia width: 100% por 100vw */
+    width: 100%;
     z-index: 1000;
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    /* Solo animamos el background y la sombra, NO la altura ni la posición */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
 }
 
-/* Cuando hay scroll */
+/* Cuando hay scroll, se anima solo el fondo y la sombra */
 .scrolled {
     background-color: white;
-    height: 60px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100vw; /* Asegura que el navbar no pierda su tamaño al hacer scroll */
 }
-
 
 /* 🟢 Logo */
 .logo {
@@ -41,7 +40,7 @@
     gap: 25px;
 }
 
-/* 🔵 Ajustes en el botón */
+/* 🔵 Botón Get Started */
 .getStarted {
     background: linear-gradient(90deg, #2562eb, #1d52d0);
     border-radius: 5px;
@@ -59,6 +58,7 @@
     position: absolute;
     top: 15px;
     right: 20px;
+    z-index: 1050;
 }
 
 /* 🔴 Responsive */
@@ -78,11 +78,13 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
 
     .menuNav.active {
-        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 }
